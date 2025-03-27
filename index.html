@@ -112,6 +112,14 @@
 
         <div id="link-container"></div>
 
+        <br>
+
+        <h3>Literatura</h3>
+
+        <br>
+
+        <div id="literatura"></div>
+
 
 
       </div>
@@ -136,6 +144,8 @@
 
 
     let link = "https://carnet-my.sharepoint.com/:u:/g/personal/danijel_klarin_skole_hr/";
+
+    // Kodovi
 
     let links = [
       { url: link + "EeW38fY2R1FCkIZwK6-pbXIB0zHrH1D-YNgaDc3w_Mx-4A?e=VuiLz7", text: "Poveznice" },
@@ -162,7 +172,35 @@
       ol.appendChild(li); // Dodajemo list item u <ol>
     });
 
+
     container.appendChild(ol); // Dodajemo <ol> u container
+
+
+    // Literatura
+
+    let listLiteratura = [
+      { url: link + "EabNYYBkIc5Nhh5L845XWAgBPujKKxz5lRe6YlDAobtReA?e=cVo405", text: "Oblikovanje mrežnog sjedišta s pomoću HTML-a" },
+
+    ];
+
+    let literatura = document.getElementById("literatura");
+
+    // Kreiramo <ol> listu
+    let olLit = document.createElement("ol");
+
+    listLiteratura.forEach(linkData => {
+      let li = document.createElement("li"); // Kreiramo list item
+      let a = document.createElement("a");
+
+      a.href = linkData.url;
+      a.textContent = linkData.text;
+      a.target = "_blank";
+
+      li.appendChild(a); // Dodajemo link u list item
+      olLit.appendChild(li); // Dodajemo list item u <ol>
+    });
+
+    literatura.appendChild(olLit); // Dodajemo <ol> u container
   </script>
 
 </body>
