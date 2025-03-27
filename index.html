@@ -142,12 +142,13 @@
       { url: link + "ET3Zx8QirylJkBhmav3PBdkByzXjU-yJ-jP1Uog-tzCCBw?e=wHV5cm", text: "Tablice" },
       { url: link + "Ec-AO99Ag11CsVYes47XJzUBua34eCLwl8rwvaXxtSBRlg?e=SXm950", text: "Slike" },
       { url: link + "ESQ3-rxkN3RHiLZjVu_kdVcBIDeS0MTuTnyvm0yg0s1KYw?e=ZGEhbU", text: "Liste" },
+      { url: link + "ETAlsrndsxdHjnt5qVk4GTABmniGa10kn-WSOFACuuqULA?e=OOiF83", text: "Oblikovanje mrežnog sjedišta s pomoću HTML-a" },
     ];
 
     let container = document.getElementById("link-container");
 
     // Kreiramo <ol> listu
-    let ul = document.createElement("ul");
+    let ol = document.createElement("ol");
 
     links.forEach(linkData => {
       let li = document.createElement("li"); // Kreiramo list item
@@ -158,10 +159,10 @@
       a.target = "_blank";
 
       li.appendChild(a); // Dodajemo link u list item
-      ul.appendChild(li); // Dodajemo list item u <ol>
+      ol.appendChild(li); // Dodajemo list item u <ol>
     });
 
-    container.appendChild(ul); // Dodajemo <ol> u container
+    container.appendChild(ol); // Dodajemo <ol> u container
   </script>
 
 </body>
